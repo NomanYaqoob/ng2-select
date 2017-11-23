@@ -425,6 +425,7 @@ export class SelectComponent implements OnInit, ControlValueAccessor, OnChanges 
 
     var _select = this;
     this.element.nativeElement.addEventListener("ng2-select-clicked", function (event: any) {
+      _select.inputValue = '';
       if (event.detail.id != _select.element.nativeElement.id) {
         _select.inputMode = false;
         _select.optionsOpened = false;
